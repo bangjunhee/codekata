@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(age: Int): Int {
+        if(age in 1 .. 120){
+            var answer: Int = 2022 - age + 1
+            return answer
+        }
+        else return 0
+    }
+}
