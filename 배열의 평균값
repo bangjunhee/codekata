@@ -1,0 +1,11 @@
+class Solution {
+    fun solution(numbers: IntArray): Double {
+        var sumArray: Double = 0.0
+        var arraylength = numbers.size
+        for (i in 1..arraylength){
+            sumArray += numbers[i-1]
+        }
+        var answer = sumArray / arraylength
+        return answer
+    }
+}
