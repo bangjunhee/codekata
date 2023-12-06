@@ -1,0 +1,11 @@
+class Solution {
+    fun solution(n: Int): Int {
+        var sum = 0
+        when(n){
+            0 -> sum = -1
+            1 -> sum = 0
+            else -> sum = (2 .. n).filter{n % it == 0}.sum()
+        }
+        return sum+1
+    }
+}
