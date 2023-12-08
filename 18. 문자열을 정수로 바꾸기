@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(s: String): Int {
+        var digit = s.length
+        var newnum = arrayOf<Char>()
+        if (s[0] == '-'){
+            for(i in 1..(digit-1)){
+                newnum = newnum.plus(s[i])
+            }
+            return -(newnum.joinToString("").toInt())
+        }
+        else return (s.toInt())
+    }
+}
