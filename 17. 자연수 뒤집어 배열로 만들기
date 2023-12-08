@@ -1,0 +1,11 @@
+class Solution {
+    fun solution(n: Long): Array<Long> {
+        var num = n
+        var answer = mutableListOf<Long>()
+        while(num != 0.toLong()){
+            answer.add((num % 10))
+            num /= 10
+        }
+        return answer.toTypedArray()
+    }
+}
