@@ -1,0 +1,10 @@
+import kotlin.math.sqrt
+class Solution {
+    fun solution(n: Long): Long {
+        var x = n.toDouble()
+        if ((sqrt(x) - sqrt(x).toLong()) == 0.toDouble()){
+            return ((sqrt(x)+1)*(sqrt(x)+1)).toLong()
+        }
+        else return -1
+        }
+}
