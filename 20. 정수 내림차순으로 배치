@@ -1,0 +1,19 @@
+class Solution {
+    fun solution(n: Long): Long {
+        var answer: Array<Long> = emptyArray()
+        var result: Long = 0
+        var num = n
+        while(num != 0.toLong()){
+            answer += (num % 10)
+            num /= 10
+        }
+        answer.sortDescending()
+        
+        var digit = answer.size
+        
+        for(i in 0 .. digit-1){
+            result += answer[i] * Math.pow(10.0, ((digit - (i+1)).toDouble())).toInt()
+        }
+        return result
+        }
+}
