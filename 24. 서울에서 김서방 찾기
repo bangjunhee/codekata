@@ -1,0 +1,14 @@
+class Solution {
+    fun solution(seoul: Array<String>): String {
+        var answer = "김서방은 없다"
+        var index = 0
+        for (name in seoul){
+            if (name == "Kim"){
+                answer = "김서방은 ${index}에 있다"
+                return answer
+            }
+            index ++
+        }
+        return answer
+    }
+}
