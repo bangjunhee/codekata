@@ -1,0 +1,10 @@
+class Solution {
+    fun solution(absolutes: IntArray, signs: BooleanArray): Int {
+        var answer = IntArray(0)
+        for( index in absolutes.indices){
+            answer += if(signs[index]) absolutes[index]
+            else -absolutes[index]
+        }
+        return answer.sum()
+    }
+}
