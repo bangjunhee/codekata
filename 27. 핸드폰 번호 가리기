@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(phone_number: String): String {
+        var numArr = phone_number.toCharArray()
+        for (i in 0..(numArr.size-5)){
+            numArr[i] = '*'
+        }
+        return String(numArr)
+    }
+}
