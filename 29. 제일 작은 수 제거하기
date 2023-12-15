@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(arr: IntArray): IntArray {
+        var sortedNums = arr.sorted()
+        var answer = intArrayOf()
+        if (arr.size == 1) answer += (-1)
+        else{
+            for (num in arr){
+                if(num != sortedNums[0]) answer+=num
+            }
+        }
+        return answer
+    }
+}
