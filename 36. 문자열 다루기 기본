@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(s: String): Boolean {
+        return if(s.length != 4 && s.length != 6) false
+        else{
+            if(s.any{it.isLetter()}) false
+            else true
+        }
+    }
+}
