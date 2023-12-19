@@ -1,0 +1,7 @@
+class Solution {
+    fun solution(price: Int, money: Int, count: Int): Long {
+        var array = Array(count){(it+1) * price.toLong()}.sum()
+        return if(array > money) (array - money)
+        else 0L
+    }
+}
