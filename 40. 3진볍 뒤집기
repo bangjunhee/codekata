@@ -1,0 +1,15 @@
+class Solution {
+    fun solution(n: Int): Int {
+        var ternary = intArrayOf()
+        var num = n
+        var answer = 0
+        while(num != 0){
+            ternary += num % 3
+            num /= 3
+        }
+        for(i in ternary.indices){
+            answer += ternary[ternary.size - (i+1)] * Math.pow(3.0, i.toDouble()).toInt()
+        }
+        return answer
+    }
+}
