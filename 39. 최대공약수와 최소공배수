@@ -1,0 +1,15 @@
+import kotlin.math.min
+class Solution {
+    fun solution(n: Int, m: Int): IntArray {
+
+        var gcd = 0
+        var x = min(n, m)
+        for(i in 1..x){
+            if(n % i == 0 && m % i == 0){
+                gcd = i
+            }
+        }
+        var answer = intArrayOf(gcd, (m*n)/gcd)
+        return answer
+    }
+}
