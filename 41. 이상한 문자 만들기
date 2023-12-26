@@ -1,0 +1,19 @@
+class Solution {
+    fun solution(s: String): String {
+        var words = s.split(" ").toMutableList()
+
+        words = words.map { word ->
+        val updatedWord = StringBuilder(word.length)
+
+        for (j in word.indices) {
+            updatedWord.append(if (j % 2 == 0) word[j].toUpperCase() else word[j].toLowerCase())
+        }
+
+        updatedWord.toString()
+        }.toMutableList()
+
+        val answer = words.joinToString(" ")
+        return answer
+    }
+}
+
