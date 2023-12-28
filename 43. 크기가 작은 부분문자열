@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(t: String, p: String): Int {
+        var num = ""
+        var count = 0
+        var plength = p.length
+        for(i in 0..t.length-plength){
+            num = t.substring(i, i+plength)
+            if(num <= p)
+                count++
+        }
+        return count
+    }
+}
