@@ -1,0 +1,12 @@
+class Solution {
+    fun solution(s: String, n: Int): String {
+        val result = StringBuilder()
+        for (char in s) {
+            if (char.isLetter()) {
+                val base = if (char.isUpperCase()) 'A' else 'a'
+                result.append((base + (char - base + n) % 26))
+            } else result.append(char)
+        }
+        return result.toString()
+    }
+}
